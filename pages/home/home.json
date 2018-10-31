@@ -1,0 +1,10 @@
+{
+	"usingComponents": {
+		"cart-act-btns": "../../components/cartActBtns/cartActBtns",
+		"act-bar": "../../components/actBar/actBar"
+	},
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "乐纯快买"
+}

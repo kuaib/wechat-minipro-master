@@ -1,0 +1,26 @@
+<view class="list-wrap clearfix">
+    <view class="list-item {{index%2==0?'odd':'even'}}" wx:for="{{prodList}}" wx:key="item.id">
+        <view class="img">
+            <image src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="prod-name">{{item.name}}</view>
+        <view class="bottom-bar clearfix">
+            <text class="left">￥{{item.price}} / {{item.unit}}</text>
+            <cart-act-btns class="right" data-idx="{{index}}" bindchangeNumF="changeNum"></cart-act-btns>
+        </view>
+    </view>
+</view>
+
+<!--底部价格和数量显示-->
+<view class="bottom-act">
+    <text class="left noChoose" hidden="{{count>0}}">还未添加商品</text>
+    <text class="left" hidden="{{count==0}}">已选购：{{count}}盒</text>
+    <text class="right bg-color noFull" hidden="{{basePrice==0}}">还差￥{{tools.toFixed2(basePrice)}}</text>
+    <text class="right bg-color" hidden="{{basePrice!=0}}" bindtap="goBuy">立即购买</text>
+</view>
+
+<!--module的名字可以随便命名，使用的时候不要用错就可以哦-->
+<wxs module="tools" src="../../utils/filter.wxs"></wxs>
+
+<!-- 使用模板的方式 -->
+<include src="/template/footer/footer.wxml" />

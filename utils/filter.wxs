@@ -1,0 +1,22 @@
+var filters = {
+    // 保留2位小数
+    toFixed2: function(val) {
+        return val.toFixed(2);
+    },
+
+    // 将字符串转化为数组
+    strToArr: function(val, param) {
+        if(param) {
+            return val.split(param);
+        }
+        return val.split();
+    }
+}
+
+module.exports = {
+    toFixed2: filters.toFixed2,
+    strToArr: filters.strToArr
+}
+
+// 在wxml页面引入的时候module的名字随便命名，假设命名为aaa
+// 那么在页面中使用的时候：aaa.  的方式

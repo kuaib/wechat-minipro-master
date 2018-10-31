@@ -1,0 +1,14 @@
+<view class="footer border-top-h">
+	<navigator url="/pages/home/home" open-type="redirect" hover-cloass="none" class="footer-item">
+		<image class="img" src="http://resource.lechun.cc/miniresource/images/icon/icon-nav-pro{{pathName=='index'?'-on':''}}.png"></image>
+		<text class="font-small text {{pathName=='index'?'font-main':''}}">单盒自选</text>
+	</navigator>
+	<navigator url="/pages/logs/logs" open-type="redirect" hover-class="none" class="footer-item">
+		<image class="img" src="http://resource.lechun.cc/miniresource/images/icon/icon-nav-tuan{{pathName=='logs'?'-on':''}}.png"></image>
+		<text class="font-small text {{pathName=='logs'?'font-main':''}}">团购</text>
+	</navigator>
+	<navigator url="/pages/my/my" class="footer-item">
+		<image class="img" src="http://resource.lechun.cc/miniresource/images/icon/icon-nav-my-on.png"></image>
+		<text class="font-small text">我的乐纯</text>
+	</navigator>
+</view>

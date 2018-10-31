@@ -1,0 +1,49 @@
+/**app.wxss**/
+
+view, text {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 24rpx;
+    color: #333;
+}
+
+/*超出一行隐藏*/
+.overflow-one {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*主体风格颜色*/
+.font-color {
+	color: #f52342 !important;
+}
+.bg-color {
+	background-color: #f52342 !important;
+}
+.border-color {
+    border-color: #f52342 !important;
+}
+
+/*浮动方向*/
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+/*清除浮动*/
+.clearfix:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    clear: both;
+}

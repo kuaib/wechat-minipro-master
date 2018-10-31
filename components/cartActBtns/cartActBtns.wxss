@@ -1,0 +1,39 @@
+@import '/app.wxss';
+.cart-btns {
+    display: flex;
+}
+.num {
+    width:55rpx;
+    text-align:center;
+    margin-top:8rpx;
+}
+
+.num-btn {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    border: 1px solid;
+    position: relative;
+}
+.num-btn::before, .increase::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.num-btn::before {
+    width: 16rpx;
+    height: 2rpx;
+    background: #f52342;
+}
+.increase::before {
+    width: 16rpx;
+    height: 2rpx;
+    background: #fff;
+}
+.increase::after {
+    width: 2rpx;
+    height: 16rpx;
+    background: #fff;
+}

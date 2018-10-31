@@ -1,0 +1,140 @@
+/* pages/home/home.wxss */
+@import '/components/cartActBtns/cartActBtns.wxss';
+@import '/template/footer/footer.wxss';
+.list-wrap {
+    margin: 3% 3% 0 3%;
+    padding-bottom: 200rpx
+}
+
+.list-item {
+    float: left;
+    width: 48.5%;
+    border: 1px solid #ddd;
+    margin-bottom: 3%;
+}
+
+.list-item .img {
+    width: 60%;
+    padding-top: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+.list-item .img image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.list-item .prod-name {
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+
+.list-item .bottom-bar {
+    padding: 10rpx;
+}
+
+.odd {
+    margin-right: 1.5%;
+}
+.even {
+    margin-left: 1.5%;
+}
+
+
+/*底部价格和数量*/
+.bottom-act {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 110rpx;
+    box-shadow: 0px -1px 3px #dddd;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+}
+
+.bottom-act .left, .bottom-act .right {
+    text-align: center;
+    font-size: 28rpx;
+}
+.bottom-act .left {
+    background: #fff;
+    width: 40%;
+}
+.bottom-act .right {
+    width: 60%;
+    color: #fff;
+}
+.bottom-act .noChoose {
+    color: #ccc;
+}
+.bottom-act .noFull {
+    color: #fe5a5a;
+}
+
+
+
+
+
+
+
+
+/*.list-item {*/
+	/*width: 47%;*/
+	/*float: left;*/
+/*}*/
+/*.list-item .inner {*/
+	/*position: relative;*/
+/*}*/
+/*.list-item .img {*/
+	/*padding-top: 100%;*/
+	/*position: relative;*/
+/*}*/
+/*.list-item .img image {*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*top: 0;*/
+	/*left: 0;*/
+/*}*/
+
+/*.list-item.odd {*/
+	/*padding: 1% 1% 1% 2%;*/
+/*}*/
+
+/*.list-item.even {*/
+	/*padding: 1% 2% 1% 1%;*/
+/*}*/
+
+/*.limit {*/
+	/*position: absolute;*/
+	/*left: 0;*/
+	/*top: 20rpx;*/
+	/*padding: 10rpx;*/
+	/*font-size:24rpx;*/
+	/*color:#fff;*/
+	/*padding-right:20rpx;*/
+	/*border-top-right-radius: 24rpx;*/
+	/*border-bottom-right-radius: 24rpx;*/
+/*}*/
+
+/*.sku-wrap {*/
+	/*padding: 20rpx 5rpx;*/
+	/*display: flex;*/
+	/*justify-content: space-between;*/
+/*}*/
+
+
+/*.left-noact-color {*/
+	/*color: #ddd !important;*/
+/*}*/
+/*.right-noact-color {*/
+	/*color: #fe5a5a !important;*/
+/*}*/
+
+
+
+
+

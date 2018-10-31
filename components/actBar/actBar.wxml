@@ -1,0 +1,4 @@
+<view class="actBar font-middle txt-center">
+	<text class="left-content {{activeLeft?'':'left-noact-color'}}" bindtap="leftTap">{{leftText}}</text>
+	<text class="right-content bg-main {{activeRight?'':'right-noact-color'}}" bindtap="rightTap">{{rightText}}</text>
+</view>

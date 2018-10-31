@@ -1,0 +1,20 @@
+@import '/app.wxss';
+.actBar {
+	position: fixed;
+	bottom: 110rpx;
+	left: 0;
+	right: 0;
+	height: 110rpx;
+	line-height: 110rpx;
+	display: flex;
+	box-shadow: 10rpx 10rpx 20rpx rgba(0,0,0,.08);
+}
+.left-content {
+	width: 40%;
+	background: #fff;
+	color: #000;
+}
+.right-content {
+	width: 60%;
+	color: #fff;
+}

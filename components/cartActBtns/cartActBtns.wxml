@@ -1,0 +1,5 @@
+<view class="cart-btns">
+    <view class="decrease num-btn border-color font-color" hidden="{{num <= 0}}" data-types="desc" bindtap="changeNum"></view>
+    <text class="num" hidden="{{num <= 0}}">{{num}}</text>
+    <view class="increase num-btn border-color bg-color" data-types="asc" bindtap="changeNum"></view>
+</view>
