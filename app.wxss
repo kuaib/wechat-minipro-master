@@ -13,6 +13,10 @@ view, text {
     color: #333;
 }
 
+.page-wrapper {
+    padding: 0 20rpx;
+}
+
 /*超出一行隐藏*/
 .overflow-one {
 	overflow: hidden;
