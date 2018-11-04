@@ -1,0 +1,11 @@
+<view>
+    <block wx:if="{{hasCameraScope===true}}">
+        <camera device-position="front" flash="off" binderror="refusePro" style="width: 100%; height: 300px;"></camera>
+        <button bindtap="takePhoto">开始识别</button>
+        <image src="{{imgUrl}}"></image>
+    </block>
+    <block wx:if="{{hasCameraScope===false}}">
+        <text>你还没有开启摄像头权限，点击开启！</text>
+        <button open-type="openSetting">开启摄像头权限</button>
+    </block>
+</view>

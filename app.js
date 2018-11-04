@@ -1,10 +1,10 @@
-const hostUrl = "https://api.lechun.cc";
+const hostUrl = "https://mallapi.lechun.cc";
 App({
     onLaunch() {
         this.storageFn();       // 本地存储
         this.updateVersion();   // 更新基础库版本
         this.loginFn();         // 登录
-        this.authorizeFn();     // 获取用户当前的授权状态
+        // this.authorizeFn();     // 获取用户当前的授权状态
     },
 
     // 全局变量
