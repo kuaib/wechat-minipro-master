@@ -3,6 +3,7 @@
     "pages/logs/logs",
     "pages/chooseImg/chooseImg",
     "pages/camera/camera",
+    "pages/faceRecognition/faceRecognition",
     "pages/index/index",
     "pages/formTest/formTest",
     "pages/confirmOrder/confirmOrder",
