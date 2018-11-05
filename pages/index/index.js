@@ -16,7 +16,6 @@ Page({
         })
     },
     onLoad: function () {
-        console.log(this.route)
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -47,8 +46,7 @@ Page({
     },
     // 从bindgetuserinfo回调中获取到用户信息(参照表单组件button的)
     getUserInfo: function (e) {
-        console.log(e)
-        app.globalData.userInfo = e.detail.userInfo
+        app.globalData.userInfo = e.detail.userInfo;
         this.setData({
             userInfo: e.detail.userInfo,
             hasUserInfo: true

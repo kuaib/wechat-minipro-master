@@ -1,13 +1,27 @@
 <!--index.wxml-->
 <view class="page-wrapper">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+    <view class="userinfo">
+        <!--https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01-->
+        <!--体验版、开发版调用 wx.getUserInfo 接口，将无法弹出授权询问框，默认调用失败-->
+        <!--可以是应用以下方法获取之：一-->
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称
+        </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view>
+
+    <!--https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01-->
+    <!--体验版、开发版调用 wx.getUserInfo 接口，将无法弹出授权询问框，默认调用失败-->
+    <!-- 可以是应用以下方法获取之：二 -->
+    <view class="user-name">
+        <open-data type="userNickName"></open-data>
+    </view>
+    <view class="user-img">
+        <open-data type="userAvatarUrl"></open-data>
+    </view>
 </view>

@@ -4,11 +4,12 @@ App({
         this.storageFn();       // 本地存储
         this.updateVersion();   // 更新基础库版本
         this.loginFn();         // 登录
-        this.authorizeFn();     // 获取用户当前的授权状态
+        // this.authorizeFn();      // 获取用户当前的授权状态 ()
     },
 
     // 全局变量
     globalData: {
+        hostUrl: "https://api.lechun.cc",
         userInfo: null,     // 用户信息
     },
 
@@ -48,7 +49,7 @@ App({
         let systemInfo = wx.getSystemInfoSync();
         console.log(systemInfo.SDKVersion)
         let SDKVersionFlag = compareVersion(systemInfo.SDKVersion, '1.0.3'); // 新版本不能低于1.0.3
-        if(SDKVersionFlag >= 0) {
+        if (SDKVersionFlag >= 0) {
             const updateManager = wx.getUpdateManager()
 
             updateManager.onCheckForUpdate(function (res) {
@@ -101,6 +102,7 @@ App({
     authorizeFn() {
         wx.getSetting({
             success(res) {
+                console.log(res)
                 if (!res.authSetting['scope.userInfo']) {
                     wx.authorize({
                         scope: 'scope.userInfo',
@@ -128,13 +130,13 @@ App({
 
     // 公用请求接口
     requestApp(url, data, method, successCallback, failCallback, completeCallback) {
+        wx.showLoading();
         wx.request({
-            url: hostUrl + url,
+            url: this.globalData.hostUrl + url,
             data: data,
             method: method ? method : 'GET',
             success: res => {
                 if (res.statusCode != 200) {
-                    console.log(typeof this.onPageNotFound)
                     wx.showToast({
                         icon: 'none',
                         duration: 2000,
@@ -150,9 +152,10 @@ App({
                     duration: 2000,
                     title: '啊偶，系统出小差了'
                 })
-                failCallback && failCallback()
+                failCallback && typeof failCallback === 'function' && failCallback()
             },
             complete: () => {
+                wx.hideLoading();
                 completeCallback && typeof completeCallback === 'function' && completeCallback()
             }
         })

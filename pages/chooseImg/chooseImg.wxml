@@ -1,0 +1,51 @@
+<view class="person-info">
+    <view class="title">持卡人身份信息</view>
+    <view class="item">
+        <text class="name">还款卡归属人</text>
+        <text class="content">承租人</text>
+    </view>
+    <view class="item">
+        <text class="name">还款卡归属人</text>
+        <text class="content">承租人</text>
+    </view>
+    <view class="item">
+        <text class="name">身份证号</text>
+        <text class="content">130703198912220320</text>
+    </view>
+    <view class="item">
+        <text class="name">验证通道</text>
+        <view class="content arrow">
+            <text>银联</text>
+            <image src="../../images/arrow_right_grey.png"></image>
+        </view>
+    </view>
+</view>
+
+<view class="card-info">
+    <view class="title">持卡人身份信息</view>
+    <view class="card-content">
+        <view wx:if="{{!imgUrl}}" class="camera" bindtap="takePhoto">
+            <image src="../../images/camera.png"></image>
+        </view>
+        <view wx:else class="card-photo" bindtap="takePhoto">
+            <image src="{{imgUrl}}"></image>
+        </view>
+        <view class="tips">
+            <view class="tip-title">卡片拍摄要求</view>
+            <view class="tip-content">
+                <text class="num">1.</text>
+                <view>
+                    <text class="sub-title">扫描须知：</text>
+                    <text>卡片须是中国大陆地区正规银行储蓄卡</text>
+                </view>
+            </view>
+            <view class="tip-content">
+                <text class="num">2.</text>
+                <view>
+                    <text class="sub-title">上传须知：</text>
+                    <text>拍摄时将卡片带有17-19位数字银行卡号的正面朝上放在线框内直至识别成功</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

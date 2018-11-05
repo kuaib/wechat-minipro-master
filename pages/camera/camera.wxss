@@ -1,0 +1,6 @@
+.camera {
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 50%;
+    margin: 20rpx auto;
+}

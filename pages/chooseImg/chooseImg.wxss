@@ -1,0 +1,78 @@
+.person-info .title, .card-info .title {
+    font-size: 30rpx;
+    padding: 30rpx 20rpx;
+    border-bottom: 1px solid #f5f5f5;
+}
+.person-info .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+    border-bottom: 1px solid #f5f5f5;
+    align-items: center;
+}
+
+.person-info .item .name {
+    color: #ccc;
+}
+.person-info .item .content {
+    color: #8a8a8a;
+}
+
+.person-info .arrow {
+    position: relative;
+}
+
+.person-info .arrow image {
+    width: 15rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.person-info .arrow text {
+    margin-right: 30rpx;
+}
+
+
+.card-content {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.card-content .camera {
+    width: 160rpx;
+    height: 160rpx;
+    line-height: 160rpx;
+    border: 1px dashed #ccc;
+    text-align: center;
+
+}
+.card-content .camera image {
+    width: 48rpx;
+    height: 36rpx;
+}
+.card-content .card-photo, .card-content .card-photo image {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.card-content .tips {
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+.tip-content {
+    position: relative;
+    padding-left: 20rpx;
+}
+.tip-content .num {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.tip-content .sub-title {
+    display: block;
+    font-weight: 700;
+}

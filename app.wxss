@@ -9,12 +9,12 @@ view, text {
     text-decoration: none;
     border: none;
     box-sizing: border-box;
-    font-size: 24rpx;
+    font-size: 28rpx;
     color: #333;
 }
 
 .page-wrapper {
-    padding: 0 20rpx;
+    /*padding: 0 20rpx;*/
 }
 
 /*超出一行隐藏*/

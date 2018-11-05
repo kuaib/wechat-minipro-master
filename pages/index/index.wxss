@@ -19,3 +19,12 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.user-name {
+  font-size: 46rpx;
+  text-align: center;
+}
+.user-img {
+  width: 200rpx;
+  margin: 0 auto;
+}

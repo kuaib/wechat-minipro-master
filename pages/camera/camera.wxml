@@ -1,0 +1,12 @@
+<view class="page-wrapper">
+    <block wx:if="{{cameraAllow===true}}">
+        <view class="camera">
+            <camera device-position="back" flash="off" binderror="error" style="width:100%;height: 150px;"></camera>
+        </view>
+        <button type="primary" bindtap="faceLogin">刷脸登陆</button>
+    </block>
+    <view wx:if="{{cameraAllow===false}}">
+        <text>该页面需要开启摄像头权限</text>
+        <button open-type="openSetting" bindopensetting="onOpenSetting">点击开启</button>
+    </view>
+</view>
